@@ -77,43 +77,42 @@ function Home() {
 
 
                         <div className="col-lg-6">
-                            <h2 className='text-dark text-center'>
+                            <h2 className='text-dark text-center p-2 bg-light  border border-dark rounded'>
                                 <Typed
-                                    strings={['Latest projects ⌚']}
+                                    strings={['⌚ Latest projects ']}
                                     typeSpeed={80}
                                     showCursor={false}
                                 />
-                                <br />
-
+                                 </h2>
+                                <br /> 
 
                                 <Carousel>
                                     {ProjectsData.map((item, i) =>
-
-
-                                        <Carousel.Item interval={1000} key={i}>
+                                        <Carousel.Item interval={5000} key={i}>
                                             <Figure>
                                                 <Figure.Image
                                                     width={171}
                                                     height={180}
-                                                    alt="171x180"
+                                                    alt="Project-Image"
                                                     src= {item.image}
                                                 />
-                                                <Figure.Caption>
+                                                 <Figure.Caption>
                                                     {item.title}
+                                                </Figure.Caption>
+                                                <Figure.Caption>
+                                                    {item.description}
                                                 </Figure.Caption>
                                             </Figure>
                                         </Carousel.Item>
                                     )}
-
-
                                 </Carousel>
-                            </h2>
+                           
 
 
                         </div>
 
-                        <div className="container col-10 col-lg-4">
-                            <h2 className='text-dark text-center'>
+                        <div className="container col-10 col-lg-6">
+                            <h2 className='text-dark text-center bg-light p-2 border border-dark rounded'>
                                 <Typed
                                     strings={['I master this technologies🖥']}
                                     typeSpeed={80}
@@ -124,7 +123,7 @@ function Home() {
                             <Carousel fade >
                                 {TechData.map((item, i) =>
                                     <Carousel.Item key={i}>
-                                        <Card className='col-12'>
+                                        <Card className='container col-10'>
                                             <Card.Img variant="left" src={item.image} className="TechCardImg container col-4 mt-2" />
                                             <Card.Body className='p-2'>
                                                 <Card.Title className='mt-2'>{item.title}</Card.Title>
