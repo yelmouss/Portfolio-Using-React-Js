@@ -1,8 +1,12 @@
 import Typed from 'react-typed';
 import { TechData } from "../data/Tech";
+import { ProjectsData } from "../data/Projects";
+
+
 import Carousel from 'react-bootstrap/Carousel';
 import Card from 'react-bootstrap/Card';
 
+import Figure from 'react-bootstrap/Figure';
 
 function Home() {
     return (
@@ -80,9 +84,32 @@ function Home() {
                                     showCursor={false}
                                 />
                                 <br />
+
+
+                                <Carousel>
+                                    {ProjectsData.map((item, i) =>
+
+
+                                        <Carousel.Item interval={1000} key={i}>
+                                            <Figure>
+                                                <Figure.Image
+                                                    width={171}
+                                                    height={180}
+                                                    alt="171x180"
+                                                    src= {item.image}
+                                                />
+                                                <Figure.Caption>
+                                                    {item.title}
+                                                </Figure.Caption>
+                                            </Figure>
+                                        </Carousel.Item>
+                                    )}
+
+
+                                </Carousel>
                             </h2>
 
-                                                        
+
                         </div>
 
                         <div className="container col-10 col-lg-4">
