@@ -6,7 +6,7 @@ const position = [51.505, -0.09];
 function Footer() {
     return (
         <>
-            <footer className='footer mt-auto  text-light p-5' >
+            <footer className='footer mt-auto  text-light p-5 bg-transparent' >
                 <div className="container-fluid mt-2">
                     <div className="row">
 
@@ -51,8 +51,8 @@ function Footer() {
                 <div className=" card-footer text-center text-light fw-bold">© 2020 Copyright : <a className="text-warning" target={'_blank'} href="https://yelmouss.com/">yelmouss.com</a>
                 </div>
 
-                <a href="https://wa.me/212612865681" class="float" target="_blank">
-                    <i class="fa fa-whatsapp my-float"></i>
+                <a href="https://wa.me/212612865681" className="float" target="_blank">
+                    <i className="fa fa-whatsapp my-float"></i>
                 </a>
 
             </footer>
