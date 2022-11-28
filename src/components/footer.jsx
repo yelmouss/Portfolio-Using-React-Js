@@ -48,10 +48,10 @@ function Footer() {
 
                 </div>
 
-                <div className=" card-footer text-center text-light fw-bold">© 2020 Copyright : <a className="text-warning" target={'_blank'} href="https://yelmouss.com/">yelmouss.com</a>
+                <div className=" card-footer text-center text-light fw-bold">© 2020 Copyright : <a className="text-warning" target={'_blank'} href="https://yelmouss.com/" rel="noreferrer">yelmouss.com</a>
                 </div>
 
-                <a href="https://wa.me/212612865681" className="float" target="_blank">
+                <a href="https://wa.me/212612865681" className="float" target="_blank" rel="noreferrer">
                     <i className="fa fa-whatsapp my-float"></i>
                 </a>
 

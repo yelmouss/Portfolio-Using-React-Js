@@ -4,9 +4,14 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Routes, Route } from "react-router-dom";
 
+// structure front
 import Header from './components/header';
 import Footer from './components/footer';
+
+// routes SPA
 import Home from './components/home'
+import About from './components/About'
+
 
 
 // import React, { useEffect } from 'react';
@@ -21,6 +26,9 @@ function App() {
       {/*<Sidebar /> */}
       <Routes>
       <Route path="/" element={<Home/>} />
+      <Route path="/About" element={<About/>} />
+
+      {/* The 404 page that render when a path does not exists */}
       </Routes>
       <Footer />
 

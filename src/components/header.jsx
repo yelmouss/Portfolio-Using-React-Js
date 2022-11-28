@@ -3,43 +3,43 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import React from "react";
 
 function Header() {
-    return (
 
+    const [show, setShow] = React.useState();
+
+    return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="lg" className='col-12'>
+            <Navbar bg={`${show ? "dark" : ""}`} variant={`${show ? "dark" : ""}`} expand="lg" className='col-12'>
                 <Container>
-                    <Navbar.Brand href="#home"><img src="Geek.png" alt="Geek" width="30"
+                    <Navbar.Brand href="/"><img src="Geek.png" alt="Geek" width="30"
                         height="30"
                         className="d-inline-block align-top bg-light rounded"
                     /> Y-Elmouss</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                   
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto text-center">
-                            <Nav.Link href="#home" className='active'>Home</Nav.Link>
-                            <NavDropdown title="About" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">About</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Team</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Resume
-                                </NavDropdown.Item>
-                            </NavDropdown>
+                            <Nav.Link href="/" className='active'>Home</Nav.Link>
+                            <Nav.Link href="About" className='active'>About</Nav.Link>
+                           
                             <Nav.Link href="#link">Projects</Nav.Link>
                             <Nav.Link href="#link">Contact</Nav.Link>
                         </Nav>
+                        {/* <i className={`${show ? "fa-regular fa-hand-point-right text-light" : " fa-regular fa-hand-point-right text-dark"}`}></i> */}
                     </Navbar.Collapse>
-                    <Navbar.Collapse className="justify-content-end">
-                        <Navbar.Text>
-                            Signed in : <a href="/">Y-E Servers</a>
-                        </Navbar.Text>
-                    </Navbar.Collapse>
+
+                    <div className="justify-content-end">
+                        <div className={`fw-light ${show ? "text-light" : "text-dark"}`}>
+                            <i class={`${show ? "fa-regular fa-sun text-light" : "fa-regular fa-moon text-dark"}`} onClick={() => setShow(!show)}></i>
+                        </div>
+                    </div>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 </Container>
             </Navbar>
         </header>
     );
 }
+
 
 export default Header;

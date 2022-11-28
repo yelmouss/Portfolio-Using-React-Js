@@ -1,27 +1,26 @@
 import Typed from 'react-typed';
 import { TechData } from "../data/Tech";
-import { ProjectsData } from "../data/Projects";
+// import { ProjectsData } from "../data/Projects";
 import Carousel from 'react-bootstrap/Carousel';
 // import Card from 'react-bootstrap/Card';
-import Figure from 'react-bootstrap/Figure';
+// import Figure from 'react-bootstrap/Figure';
 // import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 // import { Doughnut } from 'react-chartjs-2';
 
 // ChartJS.register(ArcElement, Tooltip, Legend);
-
+import React from "react";
 
 function Home() {
+
+
     return (
         <>
 
 
             <main className="flex-shrink-0  home">
                 <div className="container ">
-
                     <div className="row p-2 text-light   text-center">
-
                         <div className="col-lg-12 h-100  p-2  text-center">
-
                             <h1 className='text-light fs-1 fw-bolder p-2'>
                                 <Typed
                                     strings={['I\'am Yass 👨‍💻']}
@@ -50,9 +49,7 @@ function Home() {
                                 />
                                 <br />
                             </h1>
-
                         </div>
-
                         <div className="container col-10 col-lg-6">
                             <h1 className="mt-5  p-2"> <Typed
                                 showCursor={false}
@@ -60,7 +57,7 @@ function Home() {
                                 typeSpeed={40}
                             /></h1>
                             <br />
-                            <h2 className='text-light text-center bg-light p-2 border border-dark rounded'>
+                            <h2 className='text-dark text-center bg-light p-2 border border-dark rounded'>
                                 <Typed
                                     strings={['I master this technologies🖥']}
                                     typeSpeed={80}
@@ -81,34 +78,14 @@ function Home() {
                                                 />                                             
                                                 <div className="card-body">
                                                     <h5 className="card-title"> {item.title} </h5>                                                   
-                                                    <a href="/" className="btn btn-primary">Go to Doc</a>
-                                                </div>
-                                             
-                                        </div>
-                                        {/* <Figure className='text-center'>
-                                            <Figure.Image
-                                                className="imgFigure"
-                                                width={150}
-                                                height={150}
-                                                alt="Project-Image"
-                                                src={item.image}
-                                            />
-                                            <Figure.Caption>
-                                                {item.title}
-                                            </Figure.Caption>
-                                            <Figure.Caption>
-                                                La documentation ici     {item.doc}
-
-                                            </Figure.Caption>
-                                        </Figure> */}
+                                                    <a href="/" className="btn btn-light">Go to Doc</a>
+                                                </div>                                             
+                                        </div>                                
                                     </Carousel.Item>
                                 )}
                             </Carousel>
                         </div>
-
                     </div>
-
-
                 </div>
             </main>
         </>
