@@ -101,6 +101,7 @@ function Home() {
                                                 </Figure.Caption>
                                                 <Figure.Caption>
                                                     {item.description}
+
                                                 </Figure.Caption>
                                             </Figure>
                                         </Carousel.Item>
