@@ -36,9 +36,7 @@ function Footer() {
                         </div>
 
                         <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                            <h6 className="text-uppercase mb-4 font-weight-bold">Follow me</h6>
-                            <a className="btn btn-primary btn-floating m-1" href="#!" role="button"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-primary btn-floating m-1" href="#!" role="button"><i className="fab fa-twitter"></i></a>
+                            <h6 className="text-uppercase mb-4 font-weight-bold">Follow me</h6>                          
                             <a className="btn btn-danger btn-floating m-1 " href="#!" role="button" ><i className="fab fa-google"></i></a>
                             <a className="btn btn-primary btn-floating m-1" href="#!" role="button"  ><i className="fab fa-instagram"></i></a>
                             <a className="btn btn-primary btn-floating m-1" href="#!" role="button"><i className="fab fa-linkedin-in"></i></a>
@@ -47,10 +45,15 @@ function Footer() {
                         </div>
 
                     </div>
+
                 </div>
 
-                <div className=" card-footer text-center text-light fw-bold">© 2020 Copyright : <a className="text-warning" href="https://yelmouss.com/">yelmouss.com</a>
+                <div className=" card-footer text-center text-light fw-bold">© 2020 Copyright : <a className="text-warning" target={'_blank'} href="https://yelmouss.com/">yelmouss.com</a>
                 </div>
+
+                <a href="https://wa.me/212612865681" class="float" target="_blank">
+                    <i class="fa fa-whatsapp my-float"></i>
+                </a>
 
             </footer>
 

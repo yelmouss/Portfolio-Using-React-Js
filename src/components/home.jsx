@@ -16,14 +16,14 @@ function Home() {
 
                     <div className="row p-2 mb-5">
 
-                        <div className="col-lg-6 h-100">
-                            <h1 className="mt-5"> <Typed
+                        <div className="col-lg-6 h-100  p-2 ">
+                            <h1 className="mt-5  p-2"> <Typed
                                 showCursor={false}
                                 strings={['Welcome, Bienvenue, مرحبا  😎']}
                                 typeSpeed={40}
                             /></h1>
                             <br />
-                            <h1 className='text-dark fs-1 fw-bolder'>
+                            <h1 className='text-dark fs-1 fw-bolder p-2'>
                                 <Typed
                                     strings={['I\'am Yass 👨‍💻']}
                                     typeSpeed={50}
@@ -31,7 +31,7 @@ function Home() {
                                 />
                                 <br />
                             </h1>
-                            <h2 className='text-danger'>
+                            <h2 className='text-danger  p-2'>
                                 <Typed
                                     showCursor={false}
                                     strings={[
@@ -61,53 +61,41 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
 
-
-
-
-                    {/* {ProjectsData.map((item, i) =>
-                        <li key={i}>{item.title}</li>
-                    )} */}
-
-
                     <div className="row">
-
-
-                        <div className="col-lg-6">
+                        <div className="container  col-10 col-lg-6">
                             <h2 className='text-dark text-center p-2 bg-light  border border-dark rounded'>
                                 <Typed
                                     strings={['⌚ Latest projects ']}
                                     typeSpeed={80}
                                     showCursor={false}
                                 />
-                                 </h2>
-                                <br /> 
+                            </h2>
+                            <br />
+                            <Carousel>
+                                {ProjectsData.map((item, i) =>
+                                
+                                    <Carousel.Item interval={5000} key={i} className="bg-light p-4">
+                                        <Figure>                                
+                                            <Figure.Image
+                                                width={150}
+                                                height={150}
+                                                alt="Project-Image"
+                                                src={item.image}
+                                            />
+                                            <Figure.Caption>
+                                                {item.title}
+                                            </Figure.Caption>
+                                            <Figure.Caption>
+                                                {item.description}                                             
+                                            </Figure.Caption>
+                                        </Figure>
 
-                                <Carousel>
-                                    {ProjectsData.map((item, i) =>
-                                        <Carousel.Item interval={5000} key={i}>
-                                            <Figure>
-                                                <Figure.Image
-                                                    width={171}
-                                                    height={180}
-                                                    alt="Project-Image"
-                                                    src= {item.image}
-                                                />
-                                                 <Figure.Caption>
-                                                    {item.title}
-                                                </Figure.Caption>
-                                                <Figure.Caption>
-                                                    {item.description}
+                                    </Carousel.Item>
 
-                                                </Figure.Caption>
-                                            </Figure>
-                                        </Carousel.Item>
-                                    )}
-                                </Carousel>
-                           
+                                )}
+                            </Carousel>
 
 
                         </div>
@@ -119,20 +107,26 @@ function Home() {
                                     typeSpeed={80}
                                     showCursor={false}
                                 />
-                                <br />
                             </h2>
-                            <Carousel fade >
+                            <br />
+                            <Carousel>
                                 {TechData.map((item, i) =>
-                                    <Carousel.Item key={i}>
-                                        <Card className='container col-10'>
-                                            <Card.Img variant="left" src={item.image} className="TechCardImg container col-4 mt-2" />
-                                            <Card.Body className='p-2'>
-                                                <Card.Title className='mt-2'>{item.title}</Card.Title>
-                                                <Card.Text>
-                                                    {item.description}
-                                                </Card.Text>
-                                            </Card.Body>
-                                        </Card>
+                                    <Carousel.Item interval={5000} key={i}>
+                                        <Figure>
+                                            <Figure.Image
+                                                width={150}
+                                                height={150}
+                                                alt="Project-Image"
+                                                src={item.image}
+                                            />
+                                            <Figure.Caption>
+                                                {item.title}
+                                            </Figure.Caption>
+                                            <Figure.Caption>
+                                                {item.description}
+
+                                            </Figure.Caption>
+                                        </Figure>
                                     </Carousel.Item>
                                 )}
                             </Carousel>

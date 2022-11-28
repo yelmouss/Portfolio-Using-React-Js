@@ -2,13 +2,22 @@
 
   export const ProjectsData = [
     {
-      title: 'PHP Laravel',
+      title: 'E-commerce Boutique',
       description: `Laravel is an open-source web framework written in PHP respecting the model-view-controller principle and entirely developed in object-oriented programming`,
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png',     
+      image: 'https://beprettykenitra.com/img/fenna.jpeg',
+      link :"https://beprettykenitra.com/",   
     },
     {
-      title: 'Node.Js',
-      description: `Node.js® is an open-source, cross-platform JavaScript runtime environment`,
-      image: 'https://res.cloudinary.com/practicaldev/image/fetch/s--2tHjFfPe--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f1qn7uw1ymkntxsgx3tu.png',     
+      title: 'E-commerce 2',
+      description: `Laravel is an open-source web framework written in PHP respecting the model-view-controller principle and entirely developed in object-oriented programming`,
+      image: 'https://beprettykenitra.com/img/fenna.jpeg',
+      link :"https://yelmouss.github.io/ohmyfood/",   
     },
+    {
+      title: 'SCSS Oh My-Food',
+      description: `Scss Préprocessor / Mobile App`,
+      image: 'https://yelmouss.github.io/ohmyfood/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg',
+      link :"https://beprettykenitra.com/",   
+    },
+   
 ];
