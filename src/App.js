@@ -11,6 +11,7 @@ import Footer from './components/footer';
 // routes SPA
 import Home from './components/home'
 import About from './components/About'
+import Contact from './components/contact'
 
 
 
@@ -28,7 +29,8 @@ function App() {
       <Header dark={dark} updateDark={updateDark} />     
       <Routes>
       <Route path="/" element={<Home dark={dark} updateDark={updateDark}/>} />
-      <Route path="/About" element={<About/>} />
+      <Route path="/About" element={<About  dark={dark} updateDark={updateDark}/>} />
+      <Route path="/Contact" element={<Contact  dark={dark} updateDark={updateDark}/>} />
       {/* The 404 page that render when a path does not exists */}
       </Routes>
       <Footer />

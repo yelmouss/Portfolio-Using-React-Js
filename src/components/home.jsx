@@ -16,35 +16,39 @@ function Home({ dark, updateDark }) {
     return (
         <>
 
-            <main className={`flex-shrink-0 ${dark ? "home" : ""}`} >
+            <main className={`flex-shrink-0 ${dark ? "" : "home"}`} >
                 <div className="container ">
-                
-                    <div className={`row p-2 text-center ${dark ? "text-light" : "text-dark"}`}>
+                    <div className={`row p-2 text-center ${dark ? "text-dark" : "text-light"}`}>
                         <div className="col-lg-12 h-100  p-3  text-center">
 
-                            <h1 className={`fw-bolder fs-2 ${dark ? "text-light" : "text-dark"}`}>
+                            <h1 className={`fw-bolder fs-2`}>
                                 <Typed
-                                    strings={['I\'am Yass 👨‍💻']}
+                                    strings={['I\'am Yass']}
                                     typeSpeed={50}
                                     showCursor={false}
                                 />
                                 <br />
                             </h1>
+                            <img src="Geek.png" alt="Geek" width="100"
+                                    height="100"
+                                    className="d-inline-block align-top"
+                                />
 
-                            <h2 className={`fw-bolder fs-1 ${dark ? "text-light" : "text-dark"}`}>
+                            <h2 className={`fw-bolder fs-1`}>
+                                
                                 <Typed
                                     showCursor={false}
                                     strings={[
                                         ' Web developer 💻',
                                         ' Web Designer 🖌',
-                                        ' FullStack Web Developer 💻']}
+                                        'FullStack Web Developer 💻']}
                                     typeSpeed={60}
                                     backSpeed={70}
                                 />
                             </h2>
                             <hr />
-                           
-                            <h1 className= {` fs-5 fw-bolder text-center ${dark ? "text-light" : "text-dark"}`}>
+
+                            <h1 className={` fs-5 fw-bolder text-center`}>
                                 <Typed
                                     strings={['From Morocco 🇲🇦']}
                                     typeSpeed={50}
@@ -54,7 +58,7 @@ function Home({ dark, updateDark }) {
                             </h1>
                         </div>
                         <div className="container col-10 col-lg-6">
-                            <h1 className={`fw-bolder fs-2 ${dark ? "text-light" : "text-dark"}`}>
+                            <h1 className={`fw-bolder fs-2`}>
                                 <Typed
                                     showCursor={false}
                                     strings={['Welcome, Bienvenue, مرحبا  😎']}
@@ -69,24 +73,41 @@ function Home({ dark, updateDark }) {
                                 />
                             </h2>
                             <br />
-                            <Carousel>
-                                {TechData.map((item, i) =>
-                                    <Carousel.Item interval={5000} key={i} className=' text-center'>
-                                        <div className={`card mb-5 text-center p-2  ${dark ? "bg-transparent" : " text-dark"}`}>
-                                            <img className="img-petite container  col-5 col-lg-3 rounded"
-                                                width={100}
-                                                height={100}
-                                                alt="ProjectImage"
-                                                src={item.image}
-                                            />
-                                            <div className="card-body">
-                                                <h5 className="card-title"> {item.title} </h5>
-                                                <a href="/" className="btn btn-light">Go to Doc</a>
-                                            </div>
-                                        </div>
-                                    </Carousel.Item>
-                                )}
-                            </Carousel>
+
+                            <div className="row">
+                                <div className="col">
+                                    <Carousel >
+                                        {TechData.map((item, i) =>
+                                            <Carousel.Item interval={5000} key={i} className=' text-center'>
+                                                <div className={`card mb-5 text-center p-2  ${dark ? "bg-transparent" : " text-dark"}`}>
+                                                    <img className="img-petite container  col-5 col-lg-3 rounded"
+                                                        width={100}
+                                                        height={100}
+                                                        alt="ProjectImage"
+                                                        src={item.image}
+                                                    />
+                                                    <div className="card-body">
+                                                        <h5 className="card-title"> {item.title} </h5>
+                                                        <a href="/" className="btn btn-light">Go to Doc</a>
+                                                    </div>
+                                                </div>
+                                            </Carousel.Item>
+                                        )}
+                                    </Carousel>
+                                </div>
+                                <div className="col-12">
+                                    <h2 className='fs-4'>
+                                        <Typed
+                                            strings={['Through this website, I share with you the demonstrations and projects on which I work']}
+                                            typeSpeed={80}
+                                            showCursor={false}
+                                        />
+                                    </h2>
+                                </div>
+
+
+                            </div>
+
                         </div>
                     </div>
                 </div>

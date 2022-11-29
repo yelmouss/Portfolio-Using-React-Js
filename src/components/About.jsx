@@ -1,17 +1,22 @@
 
-function About() {
+function About({ dark, updateDark }) {
     //Calculate Age auto below
     var years = new Date(new Date() - new Date('1994-10-24')).getFullYear() - 1970
     return (
         <>
-            <main className="main home">
-                <div className="py-4 pt-md-0 pb-8 pb-sm-11 mt-lg-n8 text-light">
+            <main className={`flex-shrink-0 ${dark ? "" : "home"}`} >
+                <div className={`py-4 pt-md-0 pb-8 pb-sm-11 mt-lg-n8 ${dark ? "text-dark" : "text-light"}`}>
                     <section id="about" className="about container">
                         <div className="container">
                             <div className="row   p-5">
-                                <h1 className="text-uppercase ps-0 fs-2 fw-bolder  lh-1 position-relative">About</h1>
+                                
+                                <h1 className="text-uppercase ps-0 fs-2 fw-bolder  lh-1 position-relative">
+                                <img src="Geek.png" alt="Geek" width="100"
+                                    height="100"
+                                    className="d-inline-block align-top"
+                                />About</h1>
                                 <br />
-                                    <h1 className="fw-bolder text-outlined ps-0 fs-lg-7 fs-sm-6 fs-5 text-white lh-1 mt-sm-n4 mt-n3 position-relative z-index--1">Me</h1>
+                                    <h1 className="fw-bolder text-outlined ps-0 fs-lg-7 fs-sm-6 fs-5 lh-1 mt-sm-n4 mt-n3 position-relative z-index--1">Me</h1>
                             </div>
                         </div>
                         {/* <!-- ======= About Me ======= --> */}
