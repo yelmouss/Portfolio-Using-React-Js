@@ -16,18 +16,19 @@ import About from './components/About'
 
 // import React, { useEffect } from 'react';
 
-
+import { useState } from 'react'
 
 function App() {
+
+  const [dark, updateDark] = useState([])
   
+
   return (
     <div className="App col-12">
-      <Header />
-      {/*<Sidebar /> */}
+      <Header dark={dark} updateDark={updateDark} />     
       <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<Home dark={dark} updateDark={updateDark}/>} />
       <Route path="/About" element={<About/>} />
-
       {/* The 404 page that render when a path does not exists */}
       </Routes>
       <Footer />

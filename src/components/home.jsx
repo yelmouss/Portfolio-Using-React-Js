@@ -9,19 +9,20 @@ import Carousel from 'react-bootstrap/Carousel';
 
 // ChartJS.register(ArcElement, Tooltip, Legend);
 import React from "react";
+// import { useState } from 'react';
 
-function Home() {
 
-
+function Home({ dark, updateDark }) {
     return (
         <>
 
-
-            <main className="flex-shrink-0  home">
+            <main className={`flex-shrink-0 ${dark ? "home" : ""}`} >
                 <div className="container ">
-                    <div className="row p-2 text-light   text-center">
-                        <div className="col-lg-12 h-100  p-2  text-center">
-                            <h1 className='text-light fs-1 fw-bolder p-2'>
+                
+                    <div className={`row p-2 text-center ${dark ? "text-light" : "text-dark"}`}>
+                        <div className="col-lg-12 h-100  p-3  text-center">
+
+                            <h1 className={`fw-bolder fs-2 ${dark ? "text-light" : "text-dark"}`}>
                                 <Typed
                                     strings={['I\'am Yass 👨‍💻']}
                                     typeSpeed={50}
@@ -29,7 +30,8 @@ function Home() {
                                 />
                                 <br />
                             </h1>
-                            <h2 className='fw-bolder  p-2'>
+
+                            <h2 className={`fw-bolder fs-1 ${dark ? "text-light" : "text-dark"}`}>
                                 <Typed
                                     showCursor={false}
                                     strings={[
@@ -41,7 +43,8 @@ function Home() {
                                 />
                             </h2>
                             <hr />
-                            <h1 className='text-light fs-5 fw-bolder text-center'>
+                           
+                            <h1 className= {` fs-5 fw-bolder text-center ${dark ? "text-light" : "text-dark"}`}>
                                 <Typed
                                     strings={['From Morocco 🇲🇦']}
                                     typeSpeed={50}
@@ -51,11 +54,12 @@ function Home() {
                             </h1>
                         </div>
                         <div className="container col-10 col-lg-6">
-                            <h1 className="mt-5  p-2"> <Typed
-                                showCursor={false}
-                                strings={['Welcome, Bienvenue, مرحبا  😎']}
-                                typeSpeed={40}
-                            /></h1>
+                            <h1 className={`fw-bolder fs-2 ${dark ? "text-light" : "text-dark"}`}>
+                                <Typed
+                                    showCursor={false}
+                                    strings={['Welcome, Bienvenue, مرحبا  😎']}
+                                    typeSpeed={40}
+                                /></h1>
                             <br />
                             <h2 className='text-dark text-center bg-light p-2 border border-dark rounded'>
                                 <Typed
@@ -68,19 +72,18 @@ function Home() {
                             <Carousel>
                                 {TechData.map((item, i) =>
                                     <Carousel.Item interval={5000} key={i} className=' text-center'>
-                                        <div className="card mb-5 text-center bg-transparent">
-                                            
-                                            <img  className="img-petite container  col-5 col-lg-3"
+                                        <div className={`card mb-5 text-center p-2  ${dark ? "bg-transparent" : " text-dark"}`}>
+                                            <img className="img-petite container  col-5 col-lg-3 rounded"
                                                 width={100}
                                                 height={100}
                                                 alt="ProjectImage"
                                                 src={item.image}
-                                                />                                             
-                                                <div className="card-body">
-                                                    <h5 className="card-title"> {item.title} </h5>                                                   
-                                                    <a href="/" className="btn btn-light">Go to Doc</a>
-                                                </div>                                             
-                                        </div>                                
+                                            />
+                                            <div className="card-body">
+                                                <h5 className="card-title"> {item.title} </h5>
+                                                <a href="/" className="btn btn-light">Go to Doc</a>
+                                            </div>
+                                        </div>
                                     </Carousel.Item>
                                 )}
                             </Carousel>
@@ -91,7 +94,6 @@ function Home() {
         </>
     );
 }
-
 
 export default Home;
 
